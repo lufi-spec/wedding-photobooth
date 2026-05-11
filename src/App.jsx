@@ -474,6 +474,23 @@ if (loading) {
       </section>
 
       {/* COUPLE */}
+      {/* INTRO */}
+<section className="py-20 px-6">
+
+  <div className="max-w-3xl mx-auto text-center">
+
+    <p className="text-lg leading-loose text-stone-700">
+      Assalamu’alaikum Warahmatullahi Wabarakatuh
+    </p>
+
+    <p className="mt-8 text-lg leading-loose text-stone-600">
+      Dengan memohon rahmat dan ridho Allah Subhanahu Wa Ta’ala,
+      insyaaAllah kami akan menyelenggarakan acara pernikahan :
+    </p>
+
+  </div>
+
+</section>
 <section
 
   id="mempelai"
