@@ -290,7 +290,7 @@ if (loading) {
               The Wedding Of
             </p>
 
-            <h1 className="font-wedding text-5xl sm:text-4xl sm:text-5xl md:text-6xl md:text-9xl text-[#D4AF37] drop-shadow-[0_0_20px_rgba(212,175,55,0.6)]">
+            <h1 className="font-wedding text-3xl sm:text-4xl md:text-5xl sm:text-4xl sm:text-5xl md:text-6xl md:text-9xl text-[#D4AF37] drop-shadow-[0_0_20px_rgba(212,175,55,0.6)]">
               Meidy & Rais
             </h1>
 <div className="mb-8">
@@ -366,7 +366,7 @@ if (loading) {
             The Wedding Of
           </p>
 
-          <h1 className="font-wedding text-5xl sm:text-4xl sm:text-5xl md:text-6xl md:text-[120px] text-yellow-700 leading-none">
+          <h1 className="font-wedding  sm:text-5xl md:text-6xl md:text-[120px] text-yellow-700 leading-none">
             Meidy & Rais
           </h1>
 
@@ -423,24 +423,24 @@ if (loading) {
       Save The Date
     </h2>
 
-    <div className="grid grid-cols-1 md:grid-cols-2 md:grid-cols-6 gap-6">
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
 
-      <div className="bg-white/60 backdrop-blur-xl rounded-[30px] shadow-xl py-10">
+      <div className="bg-white/60 backdrop-blur-xl rounded-[30px] shadow-xl py-6 px-2">
         <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-yellow-700">{timeLeft.days || 0}</h3>
         <p className="mt-3 tracking-[3px]">Hari</p>
       </div>
 
-      <div className="bg-white/60 backdrop-blur-xl rounded-[30px] shadow-xl py-10">
+      <div className="bg-white/60 backdrop-blur-xl rounded-[30px] shadow-xl py-6 px-2">
         <h3 className="text-5xl font-bold text-yellow-700">{timeLeft.hours || 0}</h3>
         <p className="mt-3 tracking-[3px]">Jam</p>
       </div>
 
-      <div className="bg-white/60 backdrop-blur-xl rounded-[30px] shadow-xl py-10">
+      <div className="bg-white/60 backdrop-blur-xl rounded-[30px] shadow-xl py-6 px-2">
         <h3 className="text-5xl font-bold text-yellow-700">{timeLeft.minutes || 0}</h3>
         <p className="mt-3 tracking-[3px]">Menit</p>
       </div>
 
-      <div className="bg-white/60 backdrop-blur-xl rounded-[30px] shadow-xl py-10">
+      <div className="bg-white/60 backdrop-blur-xl rounded-[30px] shadow-xl py-6 px-2">
         <h3 className="text-5xl font-bold text-yellow-700">{timeLeft.seconds || 0}</h3>
         <p className="mt-3 tracking-[3px]">Detik</p>
       </div>
@@ -524,7 +524,7 @@ if (loading) {
     بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم
   </p>
 
-  <h2 className="font-wedding text-5xl text-yellow-700">
+  <h2 className="font-wedding text-3xl sm:text-4xl md:text-5xl text-yellow-700">
     Mempelai
   </h2>
 
@@ -574,7 +574,7 @@ if (loading) {
 
 </div>
 
-            <h2 className="font-wedding text-3xl sm:text-4xl md:text-5xl text-yellow-700 mt-6">
+            <h2 className="font-wedding text-2xl sm:text-3xl md:text-5xl whitespace-nowrap text-yellow-700 mt-6">
               Meidy Tamara, S.PD
             </h2>
 
@@ -620,7 +620,7 @@ if (loading) {
 
 </div>
 
-            <h2 className="font-wedding text-3xl sm:text-4xl md:text-[42px] leading-tight text-yellow-700 mt-6">
+            <h2 className="font-wedding text-2xl sm:text-3xl md:text-[42px] whitespace-nowrap leading-tight text-yellow-700 mt-6">
               Muhammad Rais, S.H
             </h2>
 
@@ -642,7 +642,7 @@ if (loading) {
 
           <FaMapMarkerAlt className="mx-auto text-4xl text-yellow-700 mb-6" />
 
-          <h2 className="font-wedding text-5xl text-yellow-700 mb-6">
+          <h2 className="font-wedding text-3xl sm:text-4xl md:text-5xl text-yellow-700 mb-6">
             Lokasi Acara
           </h2>
 
@@ -681,7 +681,7 @@ if (loading) {
               Akad Nikah
             </h3>
 
-           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6 text-left">
+           <div className="grid grid-cols-2 gap-4 gap-8 mt-6 text-left">
   
   <div>
     <p className="text-3xl font-semibold text-stone-700">
@@ -707,11 +707,11 @@ if (loading) {
           {/* Resepsi */}
           <div className="bg-gradient-to-br from-[#FFF8ED] to-[#F5E9D7] rounded-[40px] p-10 shadow-2xl">
 
-            <h3 className="font-wedding text-5xl text-yellow-700 mb-6">
+            <h3 className="font-wedding text-3xl sm:text-4xl md:text-5xl text-yellow-700 mb-6">
               Resepsi
             </h3>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6 text-left">
+            <div className="grid grid-cols-2 gap-4 gap-8 mt-6 text-left">
   
   <div>
     <p className="text-xl sm:text-2xl md:text-3xl font-semibold text-stone-700">
@@ -826,7 +826,7 @@ if (loading) {
 
     </div>
 
-    <div className="grid md:grid-cols-1 md:grid-cols-2 gap-10">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
 
       {/* BANK ACEH */}
       <div className="bg-white/70 backdrop-blur-xl rounded-[35px] shadow-[0_20px_60px_rgba(0,0,0,0.15)] p-10 border border-white/40">
@@ -835,7 +835,7 @@ if (loading) {
           Bank Aceh
         </h3>
 
-        <p className="mt-6 text-3xl tracking-[4px] font-semibold text-stone-700">
+        <p className="mt-6 text-xl sm:text-2xl md:text-3xl break-all font-semibold text-stone-700">
           50702200043666
         </p>
 
@@ -862,7 +862,7 @@ if (loading) {
           BSI
         </h3>
 
-        <p className="mt-6 text-3xl tracking-[4px] font-semibold text-stone-700">
+        <p className="mt-6 text-xl sm:text-2xl md:text-3xl break-all font-semibold text-stone-700">
           7355674139
         </p>
 
@@ -947,7 +947,7 @@ if (loading) {
       {/* BOTTOM NAV */}
       <div className="fixed bottom-5 left-1/2 -translate-x-1/2 z-40">
 
-        <div className="bg-[#314028]/80 border border-yellow-500/20 backdrop-blur-xl px-4 py-3 rounded-full flex gap-4 sm:gap-8 text-sm sm:text-base text-white shadow-2xl overflow-x-auto max-w-[95vw]">
+        <div className="bg-[#314028]/80 border border-yellow-500/20 backdrop-blur-xl px-4 py-3 rounded-full flex justify-center gap-3 sm:gap-6 text-sm sm:text-base text-white shadow-2xl overflow-x-auto max-w-[95vw]">
 
          <button
   onClick={() =>
