@@ -94,7 +94,7 @@ function Couple() {
             </div>
 
         <h2 className="font-luxury text-4xl sm:text-5xl font-semibold text-[#6B4A35] mt-10 leading-tight">
-  Meidy Tamara, S.PD
+  Meidy Tamara, S.Pd
 </h2>
 
             <p className="mt1 text-gray-600 text-lg">

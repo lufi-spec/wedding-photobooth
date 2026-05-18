@@ -19,6 +19,42 @@ function MusicPlayer({ playing }) {
 
   }, [playing]);
 
+
+
+  useEffect(() => {
+
+    const handleVisibility = () => {
+
+      if (document.hidden) {
+
+        audioRef.current.pause();
+
+      } else {
+
+        if (playing) {
+          audioRef.current.play();
+        }
+
+      }
+
+    };
+
+    document.addEventListener(
+      "visibilitychange",
+      handleVisibility
+    );
+
+    return () => {
+      document.removeEventListener(
+        "visibilitychange",
+        handleVisibility
+      );
+    };
+
+  }, [playing]);
+
+
+
   return (
     <audio
       ref={audioRef}

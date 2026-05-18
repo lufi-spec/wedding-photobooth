@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+
 function RSVP({
   handleSubmit,
   nama,
@@ -9,6 +11,16 @@ function RSVP({
   ucapan,
   setUcapan,
 }) {
+  const [messages, setMessages] = useState([]);
+  useEffect(() => {
+  fetch(
+    "https://script.google.com/macros/s/AKfycbz0ECFx3eRcVJSLJh0pS0vOSk7zLqHw2_teJWeAKpIFu91OcQb9zPzEAnJ9XoWtX5nV/exec"
+  )
+    .then((res) => res.json())
+    .then((data) => {
+      setMessages(data.reverse());
+    });
+}, []);
   return (
     <section id="rsvp" className="py-24 px-6">
 
@@ -61,7 +73,34 @@ function RSVP({
           </button>
 
         </form>
+<div className="mt-12 space-y-4 max-h-[500px] overflow-y-auto pr-2">
 
+  <h3 className="text-2xl text-center text-[#5C1A1B] font-semibold mb-6">
+    Ucapan & Doa
+  </h3>
+
+  {messages.map((item, index) => (
+    <div
+      key={index}
+      className="bg-white/70 rounded-2xl p-5 shadow-md"
+    >
+      <div className="flex justify-between items-center mb-2">
+        <h4 className="font-semibold text-[#5C1A1B]">
+          {item.nama}
+        </h4>
+
+        <span className="text-sm text-gray-500">
+          {item.kehadiran}
+        </span>
+      </div>
+
+      <p className="text-gray-700">
+        {item.ucapan}
+      </p>
+    </div>
+  ))}
+
+</div>
       </div>
 
     </section>

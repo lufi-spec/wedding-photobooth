@@ -35,7 +35,7 @@ const handleSubmit = async (e) => {
   }
 
   await fetch(
-    "https://script.google.com/macros/s/AKfycbw5VTa1GoWSyKklJOP3OAQhyweJM09-fR2EbB5Q1rF1bFPAnzBwPYgp4pFvYxKStc9c/exec",
+    "https://script.google.com/macros/s/AKfycbz0ECFx3eRcVJSLJh0pS0vOSk7zLqHw2_teJWeAKpIFu91OcQb9zPzEAnJ9XoWtX5nV/exec",
     {
       method: "POST",
       body: JSON.stringify(data),

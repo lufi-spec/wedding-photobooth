@@ -16,11 +16,11 @@ function Hero({ setPlaying, playing, toast }) {
 
         {/* Background */}
         <div
-          className="absolute inset-0 bg-cover bg-center opacity-20 scale-110"
-          style={{
-            backgroundImage: `url(${foto3})`,
-          }}
-        ></div>
+  className="absolute inset-0 bg-cover bg-center opacity-10"
+  style={{
+    backgroundImage: `url(${foto3})`,
+  }}
+></div>
 
         {/* Floral Left */}
         <img
@@ -36,6 +36,18 @@ function Hero({ setPlaying, playing, toast }) {
           alt=""
         />
 
+<img
+  src={floralLeft}
+  className="absolute left-0 top-0 w-40 opacity-80"
+/>
+
+<img
+  src={floralRight}
+  className="absolute right-0 bottom-0 w-40 opacity-80"
+/>
+<h2 className="text-5xl text-[#5C1A1B] font-arabic mb-4">
+  أنيس جمال
+</h2>
         {/* Floral */}
         <div className="absolute left-0 bottom-0 w-64 opacity-70">
           <img
@@ -55,26 +67,34 @@ function Hero({ setPlaying, playing, toast }) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
-          className="relative z-10"
+          className="relative z-10 max-w-md mx-auto"
         >
-          <p className="uppercase tracking-[5px] text-sm text-yellow-700 mb-4">
-            The Wedding Of
-          </p>
 
-          <h1 className="font-wedding text-4xl sm:text-5xl md:text-6xl lg:text-[120px] text-yellow-700 leading-none">
+          <h1 className="font-wedding text-4xl sm:text-5xl md:text-6xl lg:text-[120px] text-[#5C1A1B] leading-none">
             Meidy & Rais
           </h1>
 
           <p className="mt-6 text-lg tracking-[4px] sm:tracking-[10px]">
             27 Juni 2026
           </p>
+<div className="mt-10">
+  <p
+    className="text-4xl text-[#5C1A1B]"
+    style={{ fontFamily: "Amiri" }}
+  >
+    وَخَلَقْنَكُمْ أَزْوَاجًا
+  </p>
 
+  <p className="text-gray-500 mt-3 text-sm">
+    "Dan Kami jadikan kamu berpasang-pasangan"
+  </p>
+</div>
           <div className="mt-10 flex items-center justify-center gap-4">
 
             <a
               href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wedding+Meidy+%26+Rais&dates=20260626T020000Z/20260627T100000Z"
               target="_blank"
-              className="px-6 py-3 rounded-full bg-[#314028] text-white shadow-xl flex items-center gap-2"
+              className="px-6 py-3 rounded-full bg-[#5C1A1B] text-white shadow-xl flex items-center gap-2"
             >
               <FaRegCalendarAlt />
               Save Date
@@ -107,7 +127,6 @@ function Hero({ setPlaying, playing, toast }) {
           <div className="absolute left-1/2 -translate-x-1/2 -top-5 text-yellow-700 text-4xl">
             ☪
           </div>
-
         </div>
 
       </section>
