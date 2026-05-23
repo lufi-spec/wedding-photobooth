@@ -76,8 +76,13 @@ function Couple() {
               {/* Glow */}
               <div className="absolute w-72 h-72 bg-pink-300/20 rounded-full blur-3xl"></div>
 
-              {/* Frame */}
-              <div className="relative p-2 rounded-full bg-gradient-to-br from-yellow-300 via-yellow-500 to-yellow-700 shadow-[0_0_40px_rgba(212,175,55,0.5)]">
+             {/* Frame */}
+<a
+  href="https://www.instagram.com/meidytamara?igsh=MXgxMTN6ajF1ZTk5bA=="
+  target="_blank"
+  rel="noopener noreferrer"
+  className="relative p-2 rounded-full bg-gradient-to-br from-yellow-300 via-yellow-500 to-yellow-700 shadow-[0_0_40px_rgba(212,175,55,0.5)] hover:scale-105 transition duration-300 cursor-pointer"
+>
 
                 <div className="p-2 rounded-full bg-white">
 
@@ -89,7 +94,7 @@ function Couple() {
 
                 </div>
 
-              </div>
+            </a>
 
             </div>
 
@@ -135,7 +140,12 @@ function Couple() {
               <div className="absolute w-72 h-72 bg-yellow-300/20 rounded-full blur-3xl"></div>
 
               {/* Frame */}
-              <div className="relative p-2 rounded-full bg-gradient-to-br from-yellow-300 via-yellow-500 to-yellow-700 shadow-[0_0_40px_rgba(212,175,55,0.5)]">
+<a
+  href="https://www.instagram.com/01aiis?igsh=MWQ2dmx0Z3h6enp2dQ=="
+  target="_blank"
+  rel="noopener noreferrer"
+  className="relative p-2 rounded-full bg-gradient-to-br from-yellow-300 via-yellow-500 to-yellow-700 shadow-[0_0_40px_rgba(212,175,55,0.5)] hover:scale-105 transition duration-300 cursor-pointer"
+>
 
                 <div className="p-2 rounded-full bg-white">
 
@@ -147,7 +157,7 @@ function Couple() {
 
                 </div>
 
-              </div>
+              </a>
 
             </div>
 
