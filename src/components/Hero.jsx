@@ -45,9 +45,25 @@ function Hero({ setPlaying, playing, toast }) {
   src={floralRight}
   className="absolute right-0 bottom-0 w-40 opacity-80"
 />
-<h2 className="text-5xl text-[#5C1A1B] font-arabic mb-4">
-  أنيس جمال
-</h2>
+<div className="flex flex-col items-center mb-6">
+
+  <h1
+    className="text-5xl sm:text-6xl text-[#5C1A1B] leading-none"
+    style={{
+      fontFamily: "Amiri",
+      direction: "rtl",
+    }}
+  >
+    وَلِيمَةُ العُرْسِ
+  </h1>
+
+  <div className="w-24 h-[1px] bg-yellow-700 my-4 opacity-60"></div>
+
+  <p className="text-gray-500 tracking-[4px] uppercase text-xs">
+    Walimatul ‘Urs
+  </p>
+
+</div>
         {/* Floral */}
         <div className="absolute left-0 bottom-0 w-64 opacity-70">
           <img
