@@ -103,7 +103,7 @@ function Couple() {
 </h2>
 
             <p className="mt1 text-gray-600 text-lg">
-              Putri ke 5 dari bapak Mahidin dan ibu Nuraida
+              Putri kelima dari Bapak Mahidin dan Ibu Nuraida
             </p>
 <div className="flex items-center justify-center gap-3 mt-6">
 
@@ -166,7 +166,7 @@ function Couple() {
 </h2>
 
             <p className="mt1 text-stone-500 text-lg tracking-wide">
-              putra ke 3 dari bapak h.M Nasir dan ibu hj.habibah
+              putra ketiga dari Bapak h.M Nasir dan Ibu hj.habibah
             </p>
 <div className="flex items-center justify-center gap-3 mt-6">
 
