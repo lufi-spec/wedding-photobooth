@@ -124,3 +124,44 @@ canvas {
 #countdown.hidden{
     display:none;
 }
+#qrPopup{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.7);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:9999;
+
+}
+
+#qrPopup.hidden{
+
+    display:none;
+
+}
+
+.qr-box{
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+}
+
+#qrcode{
+
+    margin:20px auto;
+
+}

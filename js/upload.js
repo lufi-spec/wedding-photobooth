@@ -1,55 +1,70 @@
-// ==========================
-// GOOGLE DRIVE UPLOAD
-// ==========================
+const SCRIPT_URL =
+"https://script.google.com/macros/s/AKfycbxV4VkHlshkV6f9EhnWaauCML4MrsX4QnAy7HOCbT4fgRR5T_2jdyQN3XdtX5IDTojE/exec";
 
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxV4VkHlshkV6f9EhnWaauCML4MrsX4QnAy7HOCbT4fgRR5T_2jdyQN3XdtX5IDTojE/exec";
+async function uploadToDrive(){
 
-async function uploadToDrive() {
+    const canvas=document.getElementById("canvas");
 
-    const canvas = document.getElementById("canvas");
+    const image=canvas.toDataURL("image/png")
+    .replace("data:image/png;base64,","");
 
-    const base64 = canvas
-        .toDataURL("image/png")
-        .replace("data:image/png;base64,", "");
+    const filename="PHOTO_"+Date.now()+".png";
 
-    const filename = "PHOTO_" + Date.now() + ".png";
+    const response=await fetch(SCRIPT_URL,{
 
-    try {
+        method:"POST",
 
-        const response = await fetch(SCRIPT_URL, {
+        headers:{
+            "Content-Type":"application/json"
+        },
 
-            method: "POST",
+        body:JSON.stringify({
 
-            headers: {
-                "Content-Type": "application/json"
-            },
+            filename,
 
-            body: JSON.stringify({
+            image
 
-                filename,
+        })
 
-                image: base64
+    });
 
-            })
+    const result=await response.json();
 
-        });
+    if(result.success){
 
-        const result = await response.json();
-
-        if(result.success){
-
-            showQRCode(result.url);
-
-        }else{
-
-            alert(result.error);
-
-        }
-
-    } catch(err){
-
-        console.log(err);
+        showQR(result.url);
 
     }
+
+}
+function showQR(url){
+
+    const popup=document.getElementById("qrPopup");
+
+    popup.classList.remove("hidden");
+
+    document.getElementById("qrcode").innerHTML="";
+
+    new QRCode(document.getElementById("qrcode"),{
+
+        text:url,
+
+        width:250,
+
+        height:250
+
+    });
+
+    setTimeout(()=>{
+
+        popup.classList.add("hidden");
+
+        document.getElementById("previewPage")
+        .classList.add("hidden");
+
+        document.getElementById("homePage")
+        .classList.remove("hidden");
+
+    },15000);
 
 }
