@@ -13,17 +13,19 @@ function renderPhotoWithFrame(video) {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     // ==========================
-    // POSISI FOTO DI DALAM FRAME
+    // POSISI FOTO
     // ==========================
-    // Silakan ubah angka ini sampai pas
 
-    const photoX = 140;     // jarak kiri
-    const photoY = 170;     // jarak atas
-    const photoWidth = 800; // lebar foto
-    const photoHeight = 760;// tinggi foto
+    const photoX = 155;
+    const photoY = 270;
+
+    const photoWidth = 820;
+    const photoHeight = 560;
+
+    const radius = 70;
 
     // ==========================
-    // Crop kamera agar proporsional
+    // HITUNG CROP AGAR PROPORSIONAL
     // ==========================
 
     const vw = video.videoWidth;
@@ -50,56 +52,73 @@ function renderPhotoWithFrame(video) {
     }
 
     // ==========================
-    // Load frame
+    // LOAD FRAME
     // ==========================
 
     const frame = new Image();
 
     frame.onload = () => {
 
-    // ==========================
-    // Gambar frame
-    // ==========================
-    ctx.drawImage(
-        frame,
-        0,
-        0,
-        canvas.width,
-        canvas.height
-    );
+        // Bersihkan canvas lagi
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    // ==========================
-    // Posisi foto
-    // ==========================
+        // 1. Gambar frame (background)
+        ctx.drawImage(
+            frame,
+            0,
+            0,
+            canvas.width,
+            canvas.height
+        );
 
-    const photoX = 155;
-    const photoY = 270;
+        // 2. Gambar foto
+        drawRoundedImage(
+            ctx,
+            video,
+            sx,
+            sy,
+            sw,
+            sh,
+            photoX,
+            photoY,
+            photoWidth,
+            photoHeight,
+            radius
+        );
 
-    const photoWidth = 820;
-const photoHeight = 500;
+        // 3. Pindah ke preview
+        document.getElementById("cameraPage").classList.add("hidden");
+        document.getElementById("previewPage").classList.remove("hidden");
 
-    const radius = 70;
+    };
 
-    drawRoundedImage(
-        ctx,
-        video,
-        sx,
-        sy,
-        sw,
-        sh,
-        photoX,
-        photoY,
-        photoWidth,
-        photoHeight,
-        radius
-    );
+    frame.onerror = () => {
 
-};
+        console.log("Frame gagal dimuat!");
+
+    };
 
     frame.src = "frame/wedding-frame.png";
 
 }
-function drawRoundedImage(ctx, image, sx, sy, sw, sh, dx, dy, dw, dh, radius) {
+
+// ==============================
+// FOTO DENGAN SUDUT MEMBULAT
+// ==============================
+
+function drawRoundedImage(
+    ctx,
+    image,
+    sx,
+    sy,
+    sw,
+    sh,
+    dx,
+    dy,
+    dw,
+    dh,
+    radius
+) {
 
     ctx.save();
 

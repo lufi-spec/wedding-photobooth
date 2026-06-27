@@ -8,8 +8,4 @@ function capturePhoto() {
 
     renderPhotoWithFrame(video);
 
-    document.getElementById("cameraPage").classList.add("hidden");
-
-    document.getElementById("previewPage").classList.remove("hidden");
-
 }
