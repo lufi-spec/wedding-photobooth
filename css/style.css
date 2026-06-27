@@ -95,11 +95,16 @@ video{
     margin-top:30px;
 }
 
-canvas {
-    width: auto;
-    max-width: 90vw;
+canvas{
+
+    width: min(420px, 90vw);
+
     height: auto;
-    border-radius: 15px;
+
+    border-radius: 18px;
+
+    display: block;
+
 }
 #countdown{
     position:absolute;

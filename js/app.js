@@ -1,7 +1,8 @@
-// ==========================
-// ELEMENT
-// ==========================
+// ===================================
+// APP.JS
+// ===================================
 
+// ELEMENT
 const homePage = document.getElementById("homePage");
 const cameraPage = document.getElementById("cameraPage");
 const previewPage = document.getElementById("previewPage");
@@ -11,23 +12,22 @@ const captureBtn = document.getElementById("captureBtn");
 const retakeBtn = document.getElementById("retakeBtn");
 const qrBtn = document.getElementById("qrBtn");
 
-// ==========================
+// ===================================
 // MULAI FOTO
-// ==========================
+// ===================================
 
 startBtn.addEventListener("click", () => {
 
     homePage.classList.add("hidden");
-
     cameraPage.classList.remove("hidden");
 
     startCamera();
 
 });
 
-// ==========================
+// ===================================
 // AMBIL FOTO
-// ==========================
+// ===================================
 
 captureBtn.addEventListener("click", () => {
 
@@ -35,9 +35,9 @@ captureBtn.addEventListener("click", () => {
 
 });
 
-// ==========================
+// ===================================
 // FOTO LAGI
-// ==========================
+// ===================================
 
 retakeBtn.addEventListener("click", () => {
 
@@ -47,17 +47,15 @@ retakeBtn.addEventListener("click", () => {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     previewPage.classList.add("hidden");
-
     cameraPage.classList.remove("hidden");
 
 });
-
 // ==========================
-// DOWNLOAD (UPLOAD GOOGLE DRIVE)
+// DOWNLOAD
 // ==========================
 
-qrBtn.addEventListener("click", async () => {
+qrBtn.addEventListener("click", () => {
 
-    await uploadToDrive();
+    downloadPhoto();
 
 });
